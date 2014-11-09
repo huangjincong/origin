@@ -11,27 +11,26 @@
         <![endif]-->
         <!-- JavaScript includes - jQuery, the complexify plugin and our own script.js -->
 		<g:javascript library="jquery" plugin="jquery"/>
-		<origin:javascript src="login.js"/>
+		<origin:javascript src="login.js?lan=16"/>
     </head>
     
     <body>
 
         <div id="main">
-        	
-        	<form method="post" action="/origin/j_security_check">
+       
+        	<form method="post" action="${postUrl}">
         		
         		<div class="row email">
 	    			<input type="text" id="email" name="userName" placeholder="Email" />
         		</div>
         		
         		<div class="row pass">
-        			<input type="password" id="password1" name="password" placeholder="Password" />
+        			<input type="password" id="password" name="password" placeholder="Password" />
         		</div>
-        		
-        		<div class="row pass">
-        			<input type="password" id="password2" name="password2" placeholder="Password (repeat)" disabled="true" />
-        		</div>
-        		
+        		 <div class="row remember">
+        		     <input type='checkbox' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
+				     <label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
+        		 </div>
         		<!-- The rotating arrow -->
         		<div class="arrowCap"></div>
         		<div class="arrow"></div>

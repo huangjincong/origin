@@ -101,6 +101,23 @@ h1{
     width: 278px;
 }
 
+#main form input[type=checkbox]{
+	border:none;
+	height: 20px;
+    margin: 0 auto 45px;
+    width: 25px;
+    position:relative;
+    left:-105px;
+    vertical-align:middle;
+}
+
+#main form label{
+	margin: 0 auto 45px;
+	position:relative;
+	left:-100px;
+	vertical-align:middle;
+}
+
 #main form input[disabled]{
 	opacity: 0.5;
 }
@@ -120,7 +137,6 @@ h1{
 #main form .pass input:focus{
 	background-position:0 -144px;
 }
-
 
 /*----------------------------
 	The Submit Button

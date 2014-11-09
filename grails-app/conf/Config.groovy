@@ -128,10 +128,22 @@ grails.plugin.springsecurity.apf.passwordParameter='password'
 grails.plugin.springsecurity.defaultTargetUrl = '/login/auth'
 grails.plugin.springsecurity.successHandler.defaultTargetUrl='/home'
 
+grails.plugin.springsecurity.logout.handlerNames=[
+	//'rememberMeServices'
+]
+
+grails.plugin.springsecurity.providerNames=[
+	'daoAuthenticationProvider', 
+	'anonymousAuthenticationProvider', 
+	'rememberMeAuthenticationProvider'
+]
+
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.origin.security.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.origin.security.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.origin.security.Role'
+
+grails.plugin.springsecurity.password.algorithm='SHA-512'
 
 grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
 grails.plugin.springsecurity.interceptUrlMap = [
